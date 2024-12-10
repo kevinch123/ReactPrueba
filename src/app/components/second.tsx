@@ -3,9 +3,9 @@ import React from "react";
 function SecondScreen() {
   return (
     <section>
-      <div className="flex h-screen bg-gradient-to-r from-blue-500 to-purple-500">
-        {/* Contenedor izquierdo */}
-        <div className="w-1/4 bg-white p-6 space-y-4">
+      <div className="flex flex-col md:flex-row h-screen bg-gradient-to-r from-blue-500 to-purple-500">
+        {/* Contenedor izquierdo (Botones) */}
+        <div className="w-full md:w-1/4 bg-white p-6 space-y-4 flex flex-col justify-center">
           <button className="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
             Botón 1
           </button>
@@ -17,9 +17,15 @@ function SecondScreen() {
           </button>
         </div>
 
-        {/* Contenedor derecho */}
+        {/* Contenedor derecho (Texto de la cita) */}
         <div className="flex-1 flex items-center justify-center p-8">
-          <h1 className="text-4xl font-bold text-white">¡Bienvenido a la segunda pantalla!</h1>
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center md:text-left">
+            "Cuando te sientas triste, ven aquí y recuerda lo valiosa,
+            hermosa y buena que eres. Tienes un corazón lleno de fortaleza y
+            una capacidad increíble para lograr todo lo que te propongas. 
+            Yo confío en ti, confío en que puedes con todo. Siempre serás capaz de superar cualquier desafío. 
+            ¡Eres más fuerte de lo que imaginas! 💖💪🌟"
+          </h1>
         </div>
       </div>
     </section>
