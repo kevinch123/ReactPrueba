@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rain-container {
+    position: fixed; /* Asegura que el contenedor cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    pointer-events: none; /* Para que no interfiera con los clics */
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .raindrop {
+    position: absolute;
+    top: -10px; /* Comienza por encima de la pantalla */
+    width: 2px;
+    height: 15px;
+    background-color: rgba(173, 216, 230, 0.7); /* Color de la gota */
+    border-radius: 50%;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh); /* Las gotas caen hasta el fondo de la pantalla */
+    }
+  }
+  
+  .raindrop:nth-child(odd) {
+    animation-duration: 0.7s;
+  }
+  
+  .raindrop:nth-child(even) {
+    animation-duration: 1.2s;
+  }
+  
