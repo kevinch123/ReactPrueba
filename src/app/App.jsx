@@ -1,6 +1,9 @@
 import { Link, Route, Routes } from 'react-router-dom'; // Importa Route y Routes
 import SecondScreen from './components/second'; // Importa SecondScreen
 import RainEffect from './components/rainEffect'; // Importa el componente RainEffect
+import CarouselScreen from './components/carrusel'; // Importa el componente CarouselScreen
+import Heart from './components/heart';
+
 
 function App() {
   return (
@@ -26,6 +29,10 @@ function App() {
 
         {/* Segunda pantalla */}
         <Route path="/segundaPantalla" element={<SecondScreen />} />
+        <Route path="/carousel" element={<CarouselScreen />} />
+        <Route path="/heart" element={<Heart />} />
+
+
       </Routes>
     </div>
   );
