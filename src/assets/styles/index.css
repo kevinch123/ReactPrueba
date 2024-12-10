@@ -35,4 +35,27 @@
   .raindrop:nth-child(even) {
     animation-duration: 1.2s;
   }
+
+  @keyframes draw-heart {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Clase Tailwind personalizada (opcional) */
+  @layer utilities {
+    .animate-draw-heart {
+      animation: draw-heart 2s ease-in-out forwards;
+    }
+  }
+  
   

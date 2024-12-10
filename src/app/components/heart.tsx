@@ -2,13 +2,18 @@ import React from "react";
 
 function Heart() {
   return (
-    <div className="relative w-16 h-16">
-      {/* Parte izquierda del corazón */}
-      <div className="absolute top-0 left-4 w-8 h-8 bg-red-500 rounded-full transform -rotate-45"></div>
-      {/* Parte derecha del corazón */}
-      <div className="absolute top-0 left-0 w-8 h-8 bg-red-500 rounded-full transform rotate-45"></div>
-      {/* Base del corazón */}
-      <div className="absolute top-4 left-0 w-16 h-16 bg-red-500 transform rotate-45 origin-top-left"></div>
+    <div className="flex justify-center items-center h-screen bg-gradient-to-r from-blue-500 to-purple-500">
+      {/* Emoji de corazón grande con animación */}
+      <div className="relative text-[15rem]"> {/* Tamaño ajustado a 15rem */}
+        <span
+          className="opacity-0 animate-draw-heart"
+          style={{
+            animation: "draw-heart 2s ease-in-out forwards",
+          }}
+        >
+          ❤️
+        </span>
+      </div>
     </div>
   );
 }
