@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import prueba from '../../assets/img/prueba.jpg';
-import me from '../../assets/img/me.jpeg';
+import prueba from "../../assets/img/prueba.jpg";
+import me from "../../assets/img/me.jpeg";
 
 function CarouselScreen() {
   const slides = [me, prueba, prueba]; // Arreglo de imágenes
@@ -16,13 +16,13 @@ function CarouselScreen() {
 
   return (
     <div className="h-screen bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
-      <div className="relative w-11/12 md:w-3/4 lg:w-1/2 bg-white rounded-lg shadow-lg overflow-hidden">
-        <div className="relative w-full h-64 md:h-96 overflow-hidden flex items-center justify-center">
+      <div className="relative w-auto max-w-3xl bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="relative flex items-center justify-center">
           {/* Imagen del carrusel */}
           <img
             src={slides[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
-            className="object-contain w-full h-full"
+            className="w-auto h-auto max-w-full max-h-[80vh] object-contain"
           />
         </div>
         {/* Botones de navegación */}
